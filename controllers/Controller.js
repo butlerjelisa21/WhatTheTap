@@ -1,15 +1,15 @@
-var express = require("express");
-var router = express.Router();
+// var express = require("express");
+// var router = express.Router();
 
-router.get("/", function(req, res) {
+// router.get("/", function(req, res) {
     // cat.all(function(data) {
     //   var hbsObject = {
     //     cats: data
     //   };
 
     // res.render("index", hbsObject);
-      res.render("index");
-    });
+    //   res.render("index");
+    // });
 
   
 
