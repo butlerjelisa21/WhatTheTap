@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Search from "./pages/Search";
 import Navbar from "./components/Navbar";
 import Four from "./pages/404"; 
+import Team from "./pages/Team";
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Switch>
           <Route exact path={"/"} component={Home}/>
           <Route exact path={"/search"} component={Search}/>
+          <Route exact path={"/team"} component={Team}/>
           <Route component={Four} />
         </Switch>
       </Router>
