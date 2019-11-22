@@ -9,21 +9,25 @@ module.exports = function(app) {
   });
 
   // get beer by Brewery
-  app.get("/api/requestByBrewery", function(req, res) {
-    db.Beer.findOne({
+  app.get("/api/requestByBrewery/:breweryName", function(req, res) {
+      console.log(req.params.breweryName);
+
+    db.Beer.findAll({
       where: {
-        breweryName: req.body.breweryName
+        breweryName: req.params.breweryName
       }
     }).then(function(dbBeer) {
-      res.json(dbBeer);
+      res.json(dbBeer); 
     });
   });
 
   // get beer by name
-  app.get("/api/requestByName", function(req, res) {
-    db.Beer.findOne({
+  app.get("/api/requestByName/:beerName", function(req, res) {
+    console.log(req.params.beerName);
+
+    db.Beer.findAll({
       where: {
-        beerName: req.body.beerName
+        beerName: req.params.beerName
       }
     }).then(function(dbBeer) {
       res.json(dbBeer);
@@ -31,10 +35,11 @@ module.exports = function(app) {
   });
 
   // get beer by style
-  app.get("/api/requestByStyle", function(req, res) {
-    db.Beer.findOne({
+  app.get("/api/requestByStyle/:beerStyle", function(req, res) {
+    console.log(req.params.beerStyle);
+    db.Beer.findAll({
       where: {
-        beerStyle: req.body.beerStyle
+        beerStyle: req.params.beerStyle
       }
     }).then(function(dbBeer) {
       res.json(dbBeer);
