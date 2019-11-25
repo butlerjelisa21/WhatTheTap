@@ -1,23 +1,45 @@
-// Set Handlebars.
+require("dotenv").config();
+var express = require("express");
 
-const express = require('express')
-const app = express()
-const port = 3000
-var exphbs = require("express-handlebars");
+var db = require("./models");
 
-// Parse application body as JSON
-app.use(express.urlencoded({ extended: true }));
+var app = express();
+var PORT = process.env.PORT || 3000;
+
+// Middleware
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-
-
 app.use(express.static("public"));
 
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
+// // Handlebars
+// app.engine(
+//   "handlebars",
+//   exphbs({
+//     defaultLayout: "main"
+//   })
+// );
+// app.set("view engine", "handlebars");
 
-// Import routes and give the server access to them.
-var routes = require("./controllers/articlesController.js");
+// Routes
+require("./routes/apiRoutes")(app);
 
-app.use(routes);
+var syncOptions = { force: false };
 
-app.listen(port, () => console.log(`Example app listening on port ${port}`))
+// If running a test, set syncOptions.force to true
+// clearing the `testdb`
+if (process.env.NODE_ENV === "test") {
+  syncOptions.force = true;
+}
+
+// Starting the server, syncing our models ------------------------------------/
+db.sequelize.sync(syncOptions).then(function() {
+  app.listen(PORT, function() {
+    console.log(
+      "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
+      PORT,
+      PORT
+    );
+  });
+});
+
+module.exports = app;
