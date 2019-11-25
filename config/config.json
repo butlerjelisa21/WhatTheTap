@@ -1,7 +1,7 @@
 {
     "development": {
         "username": "root",
-        "password": "rootroot",
+        "password": "root",
         "database": "threedogpint",
         "host": "localhost",
         "dialect": "mysql"
