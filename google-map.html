@@ -29,13 +29,13 @@
       id="submit">Submit</button></div>
   <div id="map"></div>
 
-  <script>
+  <!-- <script>
     var customLabel = {
       bar: {
         label: 'B'
       }
     };
-  </script>
+  </script> -->
   <script>
     let lat;
     let lng;
@@ -92,7 +92,7 @@
           var place = results[i];
           var placeid = place.place_id;
           var name = place.name;
-          console.log(name);
+          console.log(place);
           createMarker(place);
         }
       };
@@ -105,10 +105,12 @@
         });
 
         var placeName = place.name.toUpperCase();
+        var address = place.vicinity;
+        var rating= place.rating;
 
         google.maps.event.addListener(marker, 'click', function () {
 
-          infowindow.setContent('<p id="link-thing"><strong>' + placeName + '</strong></p>' + '<p><a href="http://www.google.com/search?q=' + place.name + '">Google Search</a></p>');
+          infowindow.setContent('<p id="link-thing"><strong>' + placeName + '</strong></p><p>' + address + '</p><p>Rating: ' + rating + '</p><p><a href="http://www.google.com/search?q=' + place.name + '">Google Search</a></p>');
 
           infowindow.open(map, this);
         });
@@ -116,6 +118,8 @@
     };
 
   </script>
+
+
   <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIpJqbv9keeACMWP2A_s2irfrQVA5EILs&libraries=places&callback=initMap"
     async defer></script>
