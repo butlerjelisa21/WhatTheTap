@@ -1,5 +1,5 @@
 var db = require("../models");
-
+const userController = require("../controllers/Controller")
 module.exports = function(app) {
   // Get all stored beer reviews
   app.get("/api/allBeer", function(req, res) {
@@ -60,26 +60,9 @@ module.exports = function(app) {
 
 
 // Post user login
-app.post("/api/userEmail", function(req, res){
-    db.User.create({
-       email: req.body.email,
-       password: req.body.password,
-    }).then(function(dbUser){
-        res.json(dbUser);
-    });
-});
+app.post("/api/userEmail", userController.login);
 
 // Get user login
-app.get("/api/requestUser/:email", function(req, res) {
-    console.log(req.params.email);
-
-    db.Beer.findOne({
-      where: {
-        email: req.params.email
-      }
-    }).then(function(dbUser) {
-      res.json(dbUser);
-    });
-  });
+app.get("/api/requestUser/:email", userController.create);
 
 };
