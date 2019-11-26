@@ -13,7 +13,68 @@ body {
 	font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     overflow-x: hidden;
+    background: black;
 }
+
+.icon-bar {
+    position: fixed;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  
+  /* Style the icon bar links */
+  .icon-bar a {
+    display: block;
+    text-align: right;
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 20px;
+    box-shadow: 0 0 20px rgba(255, 254, 254, 0.562);
+
+  }
+
+  img {
+    vertical-align: middle;
+    border-style: none;
+    margin-top: 5px;
+
+
+  }
+
+  
+  
+  /* Style the social media icons with color, if you want */
+  .icon-bar a:hover {
+    background-color: #000;
+  }
+  
+  .facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  
+  .google {
+    background: #dd4b39;
+    color: white;
+  }
+  
+  .linkedin {
+    background: #007bb5;
+    color: white;
+  }
+  
+  .youtube {
+    background: #bb0000;
+    color: white;
+  }
 
 .award {
     float: left
@@ -36,17 +97,35 @@ table {
 	border-spacing: 0;
 }
 #banner{
-    background: url(./craft.jpg) no-repeat center bottom;
+    background: url(./craft.jpg) no-repeat center;
     background-size: cover;
-    min-height: 50px;
+    position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  
+  /*
+  This doesn't work
+  margin-left: -25%;
+  margin-top: -25%;
+  */
+  
+  width: 100%;
+  height: 80%;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
 }
 .bg-color{
     min-height: 630px;
 }
+
+.bg-dark {
+    background-color: black!important;
+}
 #banner h2{
     font-family: 'Satisfy', sans-serif;
     font-size: 45px;
-    color: #FFB03B;
+    color: lightblue;
 }
 #banner p{
     font-family: 'PT Sans', sans-serif;
@@ -54,7 +133,7 @@ table {
     font-size: 34px;
 }
 .section-padding{
-    padding: 60px 0px;
+    padding: 200px 10px 10px 10px;
 }
 .logo-name{
     font-family: 'Satisfy', sans-serif;
@@ -63,29 +142,7 @@ table {
     color: white;
     position: auto;
 }
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    padding-top: 60px;
-    transition: 0.5s;
-}
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s
-}
-.sidenav a:hover, .offcanvas a:focus{
-    color: #f1f1f1;
-}
+
 .closebtn {
     position: absolute;
     top: 0;
@@ -106,7 +163,7 @@ table {
 }
 
 .header-h {
-    color: #FFB03B;
+    color: lightblue;
     font-size: 46px;
     font-family: 'Satisfy', sans-serif;
     font-weight: 300;
@@ -197,14 +254,14 @@ table {
 }
 .contact-form {
     margin: 8px 0 9px !important;
-    padding-bottom: 10px;
+    padding-bottom: 2px;
 }
 .contact-form textarea.form-control {
     color: #000 !important;
     height: auto;
 }
 .contacts-btn {
-    background-color:  #FFB03B !important;
+    background-color:  lightblue !important;
     color: #ffffff !important;
     width: 170px;
     height: 54px;
@@ -259,7 +316,7 @@ table {
 
 .heading{
     font-family: 'Satisfy', sans-serif;
-    color: #FFB03B;
+    color: lightblue;
     font-size: 24px;
 }
 .marb-35{
@@ -270,15 +327,18 @@ table {
 }
 .details-list ul li i {
     margin-right: 10px;
-    color: #ffb03b;
+    color: lightblue;
 }
 #about img
 {
-    border: 5px solid rgb(255, 176, 59);
+    border: 5px solid rgb(255, 255, 255);
     border-radius: 2px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+
+
 }
 #event{
-    background: url(./pour.jpg) no-repeat;
+    background: url(./wall.jpg) no-repeat;
     background-size: cover;
 }
 .left-images img {
@@ -298,13 +358,13 @@ table {
     overflow: auto;
 }
 .content-holder h2 {
-    color: #FFB03B;
+    color: lightblue;
     font-size: 32px;
     padding-bottom: 15px;
     font-family: 'Satisfy', sans-serif;
 }
 .content-holder address strong {
-    color: #FFB03B;
+    color: lightblue;
     padding: 10px 0px;
 }
 .details-text p {
@@ -314,7 +374,7 @@ table {
     font-weight: 300;
 }
 .btn-read-more {
-    background: #FFB03B;
+    background: lightblue;
     padding: 7px 19px;
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
@@ -344,7 +404,7 @@ table {
     font-family: Montserrat,arial;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #FFB03B;
+    color: lightblue;
 }
 .menu-restaurant .menu-line {
     position: absolute;
@@ -372,9 +432,9 @@ table {
 }
 
 #menu-flters ul li a.active, #menu-flters ul li a:hover {
-    background: #FFB03B;
+    background: lightblue;
     color: #fff;
-    border: 1px solid #FFB03B;
+    border: 1px solid lightblue;
 }
 #menu-flters ul li {
     display: inline-block;
@@ -417,7 +477,7 @@ table {
     padding-bottom: 20px;
     font-family: 'Satisfy', sans-serif;
     font-size: 44px;
-    color: #FFB03B;
+    color: lightblue;
 }
 .footer .widget, .footer address {
     color: #999;
@@ -433,7 +493,7 @@ table {
     display: inline-block;
 }
 #contact{
-    background-color: rgba(221, 221, 221, 0.33);
+    background-color: floralwhite;
 }
 .footer .social-list a {
     font-size: 32px;
