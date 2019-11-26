@@ -5,9 +5,16 @@ export default function componentName() {
   return (
 <Navbar bg="dark" variant="dark">
     <Container>
-
-    <Navbar.Brand href="/">Navbar</Navbar.Brand>
+    <img
+        src="img/mapped.png"
+        width="60"
+        height="60"
+        className="d-inline-block align-top"
+        alt="Nav image"
+      />
+    <Navbar.Brand href="/">Welcome</Navbar.Brand>
     <Nav className="mr-auto">
+    
       <Nav.Link href="/">Home</Nav.Link>
       <Nav.Link href="/search">Find a brewery!</Nav.Link>
     </Nav>
