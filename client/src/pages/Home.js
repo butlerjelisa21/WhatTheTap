@@ -26,12 +26,22 @@ export default function Home() {
           class="img-responsive"
           style={{ height: "160px", width: "250px" }}
         />
-         <img
-          src="img/tech.png"
-          alt="best app"
-          class="img-responsive"
-          style={{ height: "120px", width: "250px" }}
-        />
+      </section>
+      
+      <section id="event">
+        <div class="bg-color" class="section-padding">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12 text-center" style={{ padding: "20" }}>
+                <h1 class="header-h"></h1>
+              </div>
+              <div class="col-md-12" style={{ paddingBottom: "20" }}>
+
+               
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
       <section id="about" class="section-padding">
         <div class="container">
@@ -40,35 +50,26 @@ export default function Home() {
             <div class="col-md-1"></div>
             <div class="col-md-10">
               <div class="col-md-6 col-sm-6">
-                <div class="about-info">
-                  <h2 class="heading">vel illum qui dolorem eum</h2>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Libero impedit inventore culpa vero accusamus in nostrum
-                    dignissimos modi, molestiae. Autem iusto esse necessitatibus
-                    ex corporis earum quaerat voluptates quibusdam dicta!
-                  </p>
-                  <div class="details-list">
-                    <ul>
-                      <li>
-                        <i class="fa fa-check"></i>Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit
-                      </li>
-                      <li>
-                        <i class="fa fa-check"></i>Quisque finibus eu lorem quis
-                        elementum
-                      </li>
-                      <li>
-                        <i class="fa fa-check"></i>Vivamus accumsan porttitor
-                        justo sed{" "}
-                      </li>
-                      <li>
-                        <i class="fa fa-check"></i>Curabitur at massa id tortor
-                        fermentum luctus
-                      </li>
-                    </ul>
-                  </div>
-                </div>
+              <div class="content-holder">
+
+                      <h2>About our App</h2>
+                      <p>
+                        Three Dog Pint is an app dedicated to making the beer experience...easier. Our concept is simple yet effective. Search by your location to pull in local bars and breweries in your area! We also have our breweries of the month listed on our page to help point you in the right direction. Tried a beer on our list that you liked? Great, our app has a function to leave a review for the world to see. Now get out there and go drink some beers champ.
+                      </p>
+                      <address>
+                        <strong>Next Brewery Meet and Greet: </strong>
+                        1612 Collins Str, Dallas 75214
+                        <br />
+                        <strong>Time: </strong>
+                        07:30pm
+                      </address>
+                      <a
+                        class="btn btn-imfo btn-read-more"
+                        href="events-details.html"
+                      >
+                        Read more
+                      </a>
+                    </div>
               </div>
               <div class="col-md-6 col-sm-6">
                 <img src="img/pour.jpg" alt="" class="img-responsive" />
@@ -91,7 +92,7 @@ export default function Home() {
                 <div class="item active left">
 
                   <div class="col-md-6 col-sm-6 details-text">
-                    <div class="content-holder">
+                    <div class="content-holder" id="secondapp">
                       <h2>About our App</h2>
                       <p>
                         Three Dog Pint is an app dedicated to making the beer experience...easier. Our concept is simple yet effective. Search by your location to pull in local bars and breweries in your area! We also have our breweries of the month listed on our page to help point you in the right direction. Tried a beer on our list that you liked? Great, our app has a function to leave a review for the world to see. Now get out there and go drink some beers champ.
@@ -198,7 +199,7 @@ export default function Home() {
               <ul>
                 <li>
                   <a class="filter active" data-filter=".menu-restaurant">
-                    <strong><i>Picked By Us</i></strong>
+                    <strong><i>Beer</i></strong>
                   </a>
                 </li>
               </ul>
@@ -212,7 +213,7 @@ export default function Home() {
                     href="#"
                     data-meal-img="assets/img/restaurant/rib.jpg"
                   >
-                    Food Item Name
+                    Beer List
                   </a>
                   <span
                     style={{ left: "166px", right: "44px" }}

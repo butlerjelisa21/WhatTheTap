@@ -17,6 +17,10 @@ export default function componentName() {
     
       <Nav.Link href="/">Home</Nav.Link>
       <Nav.Link href="/search">Find a brewery!</Nav.Link>
+      <Nav.Link href="/Team">Meet The Team</Nav.Link>
+      <Nav.Link href="/api/userEmail">Login/Sign Up</Nav.Link>
+
+
     </Nav>
 
     </Container>
