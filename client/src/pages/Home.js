@@ -5,54 +5,38 @@ export default function Home() {
   return (
     <div>
       <section id="banner">
-        {/* <div class="bg-color">
-          <header id="header">
-            <div class="container">
-              <div id="mySidenav" class="sidenav">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a href="/search">Find a brewery!</a>
-                <a href="#event">Event</a>
-                <a href="#menu-list">Menu</a>
-                <a href="#contact">Book a table</a>
-              </div>
-              <span onclick="openNav()" class="pull-right menu-icon">☰</span>
-            </div>
-          </header>
-          <br/>
-          <br/>
-          <br/>
-          <div class="container">
-            <div class="row">
-              <div class="inner text-center">
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-              </div>
-            </div>
-          </div>
-        </div> */}
+        <div class="icon-bar">
+          <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+          <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+          <a href="#" class="google"><i class="fa fa-google"></i></a>
+          <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+          <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
+        </div>
+      
+        
         <img
           src="img/award.png"
           alt="award logo"
           class="img-responsive"
-          style={{ height: "300", width: "200" }}
+          style={{ height: "150px", width: "250px" }}
+        />
+        <img
+          src="img/bestapp.png"
+          alt="best app"
+          class="img-responsive"
+          style={{ height: "160px", width: "250px" }}
+        />
+         <img
+          src="img/tech.png"
+          alt="best app"
+          class="img-responsive"
+          style={{ height: "120px", width: "250px" }}
         />
       </section>
-
       <section id="about" class="section-padding">
         <div class="container">
           <div class="row">
-            <div class="col-md-12 text-center marb-35">
-              <h1 class="header-h">Delicious Journey</h1>
-              <p class="header-p">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                diam nonummy
-                <br />
-                nibh euismod tincidunt ut laoreet dolore magna aliquam.{" "}
-              </p>
-            </div>
+            
             <div class="col-md-1"></div>
             <div class="col-md-10">
               <div class="col-md-6 col-sm-6">
@@ -99,28 +83,22 @@ export default function Home() {
         <div class="bg-color" class="section-padding">
           <div class="container">
             <div class="row">
-              <div class="col-xs-12 text-center" style={{ padding: "60px" }}>
-                <h1 class="header-h">Up Coming events</h1>
-                <p class="header-p">Decorations 100% complete here</p>
+              <div class="col-xs-12 text-center" style={{ padding: "20" }}>
+                <h1 class="header-h"></h1>
               </div>
-              <div class="col-md-12" style={{ paddingBottom: "60px" }}>
+              <div class="col-md-12" style={{ paddingBottom: "20" }}>
+
                 <div class="item active left">
-                  <div class="col-md-6 col-sm-6 left-images">
-                    <img src="img/drink.jpg" class="img-responsive" />
-                  </div>
+
                   <div class="col-md-6 col-sm-6 details-text">
                     <div class="content-holder">
-                      <h2>Joyful party</h2>
+                      <h2>About our App</h2>
                       <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Labore eos suscipit earum voluptas aliquam
-                        recusandae, quae iure adipisci, inventore quia, quos
-                        delectus quaerat praesentium id expedita nihil illo
-                        accusantium, tempora.
+                        Three Dog Pint is an app dedicated to making the beer experience...easier. Our concept is simple yet effective. Search by your location to pull in local bars and breweries in your area! We also have our breweries of the month listed on our page to help point you in the right direction. Tried a beer on our list that you liked? Great, our app has a function to leave a review for the world to see. Now get out there and go drink some beers champ.
                       </p>
                       <address>
-                        <strong>Place: </strong>
-                        1612 Collins Str, Victoria 8007
+                        <strong>Next Brewery Meet and Greet: </strong>
+                        1612 Collins Str, Dallas 75214
                         <br />
                         <strong>Time: </strong>
                         07:30pm
@@ -144,7 +122,7 @@ export default function Home() {
         <div class="container">
           <div class="row">
             <div class="col-md-12 text-center marb-35">
-              <h1 class="header-h">Top Beers of the Month</h1>
+              <h1 class="header-h">Top Brewery's of the Month</h1>
               <div class="award">
                 <Container>
                   <Row>
@@ -154,7 +132,7 @@ export default function Home() {
                         src="img/logos.png"
                         alt="award logo"
                         class="img-responsive"
-                        style={{ height: "300", width: "200" }}
+                        style={{ height: "100px", width: "200" }}
                       />
                     </Col>
                     <Col>
@@ -163,7 +141,7 @@ export default function Home() {
                         src="img/gran.png"
                         alt="award logo"
                         class="img-responsive"
-                        style={{ height: "300", width: "200" }}
+                        style={{ height: "100px", width: "100px" }}
                       />
                     </Col>
                     <Col>
@@ -172,7 +150,7 @@ export default function Home() {
                         src="img/sol.png"
                         alt="award logo"
                         class="img-responsive"
-                        style={{ height: "300", width: "200" }}
+                        style={{ height: "100px", width: "100px" }}
                       />
                     </Col>
                     <Col>
@@ -181,50 +159,46 @@ export default function Home() {
                         src="img/revolve.png"
                         alt="award logo"
                         class="img-responsive"
-                        style={{ height: "300", width: "200" }}
+                        style={{ height: "100px", width: "100px" }}
                       />
                     </Col>
                     <Col>
                       {" "}
                       <img
                         src="img/deep.png"
-                        alt="award logo"
+                        alt="deep ellum"
                         class="img-responsive"
-                        style={{ height: "300", width: "200" }}
+                        style={{ height: "100px", width: "100px" }}
+                      />
+                    </Col>
+                    <Col>
+                      {" "}
+                      <img
+                        src="img/trim.png"
+                        alt="trim tab brewery"
+                        class="img-responsive"
+                        style={{ height: "100px", width: "100px" }}
+                      />
+                    </Col>
+                    <Col>
+                      {" "}
+                      <img
+                        src="img/nac.png"
+                        alt="trim tab brewery"
+                        class="img-responsive"
+                        style={{ height: "100px", width: "100px" }}
                       />
                     </Col>
                   </Row>
                 </Container>
               </div>
-              <p class="header-p">
-                {" "}
-                Check out the top rated beers of the month below!{" "}
-              </p>
-              <br />
-              <br />
               <br />
             </div>
-
             <div class="col-md-12  text-center" id="menu-flters">
               <ul>
                 <li>
                   <a class="filter active" data-filter=".menu-restaurant">
-                    Show All
-                  </a>
-                </li>
-                <li>
-                  <a class="filter" data-filter=".breakfast">
-                    Breakfast
-                  </a>
-                </li>
-                <li>
-                  <a class="filter" data-filter=".lunch">
-                    Lunch
-                  </a>
-                </li>
-                <li>
-                  <a class="filter" data-filter=".dinner">
-                    Dinner
+                    <strong><i>Picked By Us</i></strong>
                   </a>
                 </li>
               </ul>
@@ -479,12 +453,12 @@ export default function Home() {
         <div class="container">
           <div class="row">
             <div class="col-md-12 text-center">
-              <h1 class="header-h">Book Your table</h1>
+              <h1 class="header-h">Leave a Beer Review</h1>
               <p class="header-p">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                diam nonummy
+                Hey beer warrior...leave a review of some beers you have tried and get 20% off your next brewery visit!
+              
                 <br />
-                nibh euismod tincidunt ut laoreet dolore magna aliquam.{" "}
+                Fill out the form below.{" "}
               </p>
             </div>
           </div>
@@ -645,10 +619,13 @@ export default function Home() {
                 <h4 class="widget-title">Three Dog Pint</h4>
                 <address>
                   SMU Coding Bootcamp
+
                   <br />
-                  Dallas, TX 
+                  Dallas, TX
                 </address>
+                
                 <div class="social-list">
+
                   <a href="#">
                     <i class="fa fa-twitter" aria-hidden="true"></i>
                   </a>
