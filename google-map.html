@@ -21,7 +21,36 @@
       padding: 0;
     }
   </style>
-</head>
+</head>nction callback(results, status) {
+  if (status == google.maps.places.PlacesServiceStatus.OK) {
+    for (var i = 0; i < results.length; i++) {
+      var place = results[i];
+      var placeid = place.place_id;
+      var name = place.name;
+      console.log(place);
+      createMarker(place);
+    }
+  };
+
+  // Creates marker on map
+  function createMarker(place) {
+    var marker = new google.maps.Marker({
+      map: map,
+      position: place.geometry.location
+    });
+
+    var placeName = place.name.toUpperCase();
+    var address = place.vicinity;
+    var rating= place.rating;
+
+    google.maps.event.addListener(marker, 'click', function () {
+
+      infowindow.setContent('<p id="link-thing"><strong>' + placeName + '</strong></p><p>' + address + '</p><p>Rating: ' + rating + '</p><p><a href="http://www.google.com/search?q=' + place.name + '">Google Search</a></p>');
+
+      infowindow.open(map, this);
+    });
+  };
+};
 
 
 <body>
@@ -117,7 +146,7 @@
       };
     };
 
-  </script>
+  // </script>
 
 
   <script
