@@ -4,21 +4,6 @@ const db = require("../models");
 const bcrypt = require("bcrypt");
 const saltRounds = 13;
 
-<<<<<<< HEAD
-// router.get("/", function(req, res) {
-//     cat.all(function(data) {
-//       var hbsObject = {
-//         cats: data
-//       };
-
-//     res.render("index", hbsObject);
-//       res.render("index");
-//     });
-
-  
-
-// module.exports = router;
-=======
 // methods for userController
 
 module.exports = {
@@ -50,4 +35,3 @@ module.exports = {
         });
       },
 };
->>>>>>> 387863149ab776844bb98426f753f341cff9567f
