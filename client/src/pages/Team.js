@@ -1,5 +1,5 @@
 import React from 'react';
-import "/Users/Juice/Desktop/Homework/WhatTheTap/client/src/Team.css";
+import "/Users/benjaminlee/WhatTheTap/client/src/Team.css";
 import {Jumbotron,Container} from "react-bootstrap"
 import { CardDeck, Card} from "react-bootstrap";
 export default function Home(){
