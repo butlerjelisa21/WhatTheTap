@@ -2,17 +2,22 @@ import React from 'react';
 //import "./../components/Team.css";
 import {Jumbotron,Container} from "react-bootstrap"
 import { CardDeck, Card} from "react-bootstrap";
+import Image from 'react-bootstrap/Image'
+
+
 export default function Home(){
 
     return(
 
 <div>
     
-    <Jumbotron fluid>
-  <Container>
+    <Jumbotron fluid >
+  <Container jumbotron-fluid >
     <h1>Meet Our Team !</h1>
-   </Container>
+  </Container>
 </Jumbotron>
+
+<Image src="/img/pngfind.png" image-fluid />
 
 
 
@@ -22,62 +27,42 @@ export default function Home(){
     <Card.Img variant="top" src="/img/Sam.jpg" />
     <Card.Body>
       <Card.Title>Samantha Covington</Card.Title>
-      <Card.Text>
-        This is a wider card with supporting text below as a natural lead-in to
-        additional content. This content is a little bit longer.
-      </Card.Text>
+      Hello! My name is Samantha Covington and I am a Full Stack Web Developer. I am proficient in Javascript, HTML, and MySQL. I am experienced in CSS, mongoDB, and React as well. Orignally, I am from a small town called Combine that is southeast of Dallas, TX . I have 3 fur babies and 1 actual baby. I have a strong professional work ethic and will be dedicated to whatever task comes my way! Please contact with me on LinkedIn. I would love to connect with you!
+
+
     </Card.Body>
     <Card.Footer>
-    <div class="icon-bar">
-        <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-          </div>
+    
     </Card.Footer>
   </Card>
   <Card>
     <Card.Img variant="top" src="/img/ben.jpg"/>
     <Card.Body>
       <Card.Title>Benjamin Lee</Card.Title>
-      <Card.Text>
-        This card has supporting text below as a natural lead-in to additional
-        content.{' '}
-      </Card.Text>
+      I'm proficient in HTML, CSS, and Javascript with an understanding of node.js, jQuery, express, bootstrap, mySQL, mongoDB, and others. Skilled at working in groups, and a quick study.
     </Card.Body>
     <Card.Footer>
-    <div class="icon-bar">
-        <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-          </div>
+    
     </Card.Footer>
   </Card>
   <Card>
     <Card.Img variant="top" src="/img/bishop.jpg" />
     <Card.Body>
       <Card.Title>Bishop Johnson</Card.Title>
-      <Card.Text>
-        This is a wider card with supporting text below as a natural lead-in to
-        additional content. This card has even longer content than the first to
-        show that equal height action.
-      </Card.Text>
+  
     </Card.Body>
     <Card.Footer>
-    <div class="icon-bar">
-        <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-          </div>
+   
     </Card.Footer>
   </Card>
   <Card>
-    <Card.Img variant="top" src="/img/Jelisa.jpg" />
+    <Card.Img variant="top" src="/img/Jelisa.JPG" />
     <Card.Body>
       <Card.Title>Jelisa Butler</Card.Title>
-      <Card.Text>
-        This is a wider card with supporting text below as a natural lead-in to
-        additional content. This card has even longer content than the first to
-        show that equal height action.
-      </Card.Text>
+      Highly organized, dedicated, driven professional with several years of experience in boosting organizational success by providing proactive support in executing and accomplishing a wide variety of duties in specified timelines and constraints. Diligent and highly skilled with a broad understanding of effective marketing strategies and best business practices. Strong communication and interpersonal skills with ability to convey messages effectively to all organizational levels.
     </Card.Body>
     <Card.Footer>
-        <div class="icon-bar">
-        <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-          </div>
+     
     </Card.Footer>
   </Card>
 </CardDeck>
