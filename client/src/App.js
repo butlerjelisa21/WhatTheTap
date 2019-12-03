@@ -25,26 +25,5 @@ function App() {
   );
 }
 
-// for google map in react 
-// export class MapContainer extends Component {
-//   render() {
-//     return (
-//       <Map
-//         google={this.props.google}
-//         zoom={14}
-//         style={mapStyles}
-//         initialCenter={{
-//          lat:"",
-//          lng:"",
-//         }}
-//       />
-//     );
-//   }
-// }
-
-// export default GoogleApiWrapper({
-//   apiKey: 'AIzaSyAIpJqbv9keeACMWP2A_s2irfrQVA5EILs'
-// })(MapContainer);
-
 
 export default App;
