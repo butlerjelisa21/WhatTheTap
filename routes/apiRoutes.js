@@ -1,5 +1,5 @@
 var db = require("../models");
-const userController = require("../controller/Controller")
+const userController = require("../controllers/Controller")
 module.exports = function(app) {
   // Get all stored beer reviews
   app.get("/api/allBeer", function(req, res) {
