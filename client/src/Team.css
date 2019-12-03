@@ -11,7 +11,14 @@ body {
     padding-left: 0;
     border-radius: 0;
     background: black
-  }
+}
+
+.image-fluid{
+  vertical-align: middle;
+  width: 234px;
+  height: 234px;
+
+}
 
     img {
       vertical-align: middle;

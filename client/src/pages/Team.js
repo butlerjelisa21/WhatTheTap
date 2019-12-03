@@ -2,6 +2,7 @@ import React from 'react';
 import "/Users/Juice/Desktop/Homework/WhatTheTap/client/src/Team.css";
 import {Jumbotron,Container} from "react-bootstrap"
 import { CardDeck, Card} from "react-bootstrap";
+import Image from 'react-bootstrap/Image'
 
 
 export default function Home(){
@@ -13,8 +14,10 @@ export default function Home(){
     <Jumbotron fluid >
   <Container jumbotron-fluid >
     <h1>Meet Our Team !</h1>
-   </Container>
+  </Container>
 </Jumbotron>
+
+<Image src="/img/pngfind.png" image-fluid />
 
 
 
