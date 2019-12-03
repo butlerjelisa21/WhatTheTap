@@ -1,5 +1,5 @@
 import React from 'react';
-import "./../components/Team.css";
+//import "./../components/Team.css";
 import {Jumbotron,Container} from "react-bootstrap"
 import { CardDeck, Card} from "react-bootstrap";
 export default function Home(){
