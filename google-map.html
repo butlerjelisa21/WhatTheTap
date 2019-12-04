@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <title>Google Maps</title>
+  <style>
+    /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+    #map {
+      height: 100%;
+    }
+
+    /* Optional: Makes the sample page fill the window. */
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div><input placeholder="Enter your zipcode" type="text" id="zipcode"><button onclick="submitZip()" type="submit"
+      id="submit">Submit</button></div>
+  <div id="map"></div>
+
+  <script>
+    let lat;
+    let lng;
+    let zipcode;
+    let url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + zipcode + "&key=AIzaSyAIpJqbv9keeACMWP2A_s2irfrQVA5EILs"
+    console.log(zipcode);
+    console.log(url);
+
+    submitZip = () => {
+      zipcode = document.getElementById('zipcode').value;
+      // console.log(zipcode)
+      geocodeZip()
+    }
+
+    geocodeZip = () => {
+      let url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + zipcode + "&key=AIzaSyAIpJqbv9keeACMWP2A_s2irfrQVA5EILs"
+      console.log(url)
+      var req = new XMLHttpRequest();
+      req.responseType = 'json';
+      req.open('GET', url, true);
+      req.onload = function () {
+        var jsonResponse = req.response;
+        lat = jsonResponse.results[0].geometry.location.lat;
+        lng = jsonResponse.results[0].geometry.location.lng;
+        console.log(lat, lng)
+      }
+      req.send(null);
+      setTimeout(initMap, 500)
+    }
+    function initMap() {
+      var searchLoc = new google.maps.LatLng(lat, lng);
+
+      infowindow = new google.maps.InfoWindow();
+
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: searchLoc,
+        zoom: 13,
+      });
+
+      // Search for bars in searchLoc
+      var request = {
+    location: searchLoc,
+    radius: '10000',
+    type: ['bar']
+  };
+
+      service = new google.maps.places.PlacesService(map);
+      service.nearbySearch(request, callback);
+    };
+
+    function callback(results, status) {
+      if (status == google.maps.places.PlacesServiceStatus.OK) {
+        for (var i = 0; i < results.length; i++) {
+          var place = results[i];
+          var placeid = place.place_id;
+          var name = place.name;
+          console.log(place);
+          createMarker(place);
+        }
+      };
+
+      // Creates marker on map for bars in area code
+      function createMarker(place) {
+        var marker = new google.maps.Marker({
+          map: map,
+          position: place.geometry.location
+        });
+
+        var placeName = place.name.toUpperCase();
+        var address = place.vicinity;
+        var rating= place.rating;
+
+        google.maps.event.addListener(marker, 'click', function () {
+
+          infowindow.setContent('<p id="link-thing"><strong>' + placeName + '</strong></p><p>' + address + '</p><p>Rating: ' + rating + '</p><p><a href="http://www.google.com/search?q=' + place.name + '">Google Search</a></p>');
+
+          infowindow.open(map, this);
+        });
+      };
+    };
+
+  // </script>
+
+
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIpJqbv9keeACMWP2A_s2irfrQVA5EILs&libraries=places&callback=initMap"
+    async defer></script>
+</body>
+
+</html>

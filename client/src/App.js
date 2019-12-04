@@ -6,6 +6,8 @@ import Navbar from "./components/Navbar";
 import Four from "./pages/404"; 
 import Team from "./pages/Team";
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
+// map in react
+// import { Map, GoogleApiWrapper } from 'google-maps-react';
 
 function App() {
   return (
@@ -16,11 +18,12 @@ function App() {
           <Route exact path={"/"} component={Home}/>
           <Route exact path={"/search"} component={Search}/>
           <Route exact path={"/team"} component={Team}/>
-          <Route component={Four} />
+          <Route path={"*"} component={Four} />
         </Switch>
       </Router>
     </div>
   );
 }
+
 
 export default App;
