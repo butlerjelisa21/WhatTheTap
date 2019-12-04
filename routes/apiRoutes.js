@@ -63,6 +63,6 @@ module.exports = function(app) {
 app.post("/api/userEmail", userController.login);
 
 // Get user login
-app.get("/api/requestUser/:email", userController.create);
+app.post("/api/requestUser", userController.create);
 
 };
