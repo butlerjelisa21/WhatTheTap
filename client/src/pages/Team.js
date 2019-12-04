@@ -1,5 +1,5 @@
 import React from 'react';
-import "/Users/Juice/Desktop/Homework/WhatTheTap/client/src/Team.css";
+import "./../components/Team.css";
 import {Jumbotron,Container} from "react-bootstrap"
 import { CardDeck, Card} from "react-bootstrap";
 export default function Home(){
@@ -10,7 +10,7 @@ export default function Home(){
     
     <Jumbotron fluid>
   <Container>
-    <h1>Meet Our Team !</h1>
+    <h1>Meet Our Team!</h1>
    </Container>
 </Jumbotron>
 

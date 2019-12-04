@@ -1,9 +1,10 @@
 import React from 'react';
 import "./App.css";
+import "./Login.css";
 import Home from "./pages/Home";
 import Search from "./pages/Search";
 import Navbar from "./components/Navbar";
-import Four from "./pages/404"; 
+import Login from "./pages/Login"; 
 import Team from "./pages/Team";
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
@@ -16,11 +17,15 @@ function App() {
           <Route exact path={"/"} component={Home}/>
           <Route exact path={"/search"} component={Search}/>
           <Route exact path={"/team"} component={Team}/>
-          <Route component={Four} />
+          <Route  exact path={"/login"} component={Login} />
         </Switch>
       </Router>
     </div>
   );
+
+  
 }
+
+
 
 export default App;
