@@ -123,6 +123,11 @@ export class Search extends Component {
 
   render() {
     return (
+<<<<<<< HEAD
+        
+      <div><h1>Hello</h1></div>
+    )
+=======
       <div>
         <div style={styles.inputDiv}>
           <h2>Enter your zipcode to find a brewery near you!</h2>
@@ -140,6 +145,7 @@ export class Search extends Component {
         <div id="google-map" style={styles.map}></div>
       </div>
     );
+>>>>>>> 71c8ef2c74e7e5155946e7d3f3dd3772cdb4fc52
   }
 }
 // export default Search;

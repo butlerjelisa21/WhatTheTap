@@ -4,7 +4,11 @@
   "private": true,
   "proxy": "http://localhost:3001",
   "dependencies": {
+<<<<<<< HEAD
+    "axios": "^0.19.0",
+=======
     "google-maps-react": "^2.0.2",
+>>>>>>> 71c8ef2c74e7e5155946e7d3f3dd3772cdb4fc52
     "react": "^16.12.0",
     "react-bootstrap": "^1.0.0-beta.16",
     "react-dom": "^16.12.0",
